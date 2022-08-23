@@ -4,6 +4,7 @@
  * input seconds, output minutes and hours
  * sec = seconds inputted
  * sect = total second
+ * secd = seconds converted to int
  * hour = hours
  * min = minutes
  * secs = leftover seconds
@@ -16,8 +17,15 @@ public class program_4
         Scanner sec = new Scanner (System.in);
         System.out.println ("How many seconds? ");
         String sect = sec.nextLine();
-        int hour = (sect / 3600);
-        
-        
+        int secd = Integer.parseInt(sect);
+        int hour = (secd/3600);
+        int min = ((secd-(3600*hour))/60);
+        int secs = ((secd - (3600*hour))%60);
+        System.out.println ("Hours:");
+        System.out.println (hour);
+        System.out.println ("Minutes");
+        System.out.println (min);
+        System.out.println ("Seconds:");
+        System.out.println (secs);
     }
 }
