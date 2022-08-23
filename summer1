@@ -1,0 +1,23 @@
+/*Will Stenzel
+ * 8/22/22
+ * seconds to hours and minutes calculator
+ * input seconds, output minutes and hours
+ * sec = seconds inputted
+ * sect = total second
+ * hour = hours
+ * min = minutes
+ * secs = leftover seconds
+ */
+import java.util.Scanner;
+public class program_4
+{
+    public static void main (String[] args)
+    {
+        Scanner sec = new Scanner (System.in);
+        System.out.println ("How many seconds? ");
+        String sect = sec.nextLine();
+        int hour = (sect / 3600);
+        
+        
+    }
+}
