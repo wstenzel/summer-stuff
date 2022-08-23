@@ -1,0 +1,50 @@
+/*Will Stenzel
+  8/23/22
+  program 5
+  allows user to input 4 variables and makes to points, then gives the distance between them
+  X0,X01,X1 = the first X as it moves through the program
+  X02,X002,X2 = the seconnd X as it moves through the program
+ Y0,Y01,Y1 = the first Y as it moves through the program
+ Y02,Y002,Y2 = the seconnd Y as it moves through the program
+ X = x2-x1
+ Y = y2 + y1
+ Xsqr = X^2
+ Ysqr = Y^2
+ tot = total before square root
+ total = total after square root
+*/
+  import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+  public static void main(String[] args) {
+    //start getting variables
+    Scanner X0 = new Scanner (System.in);
+    System.out.println ("x1: ");
+    String X01 = X0.nextLine();
+    int X1 = Integer.parseInt(X01);
+    Scanner X02 = new Scanner (System.in);
+    System.out.println ("x2: ");
+    String X002 = X02.nextLine();
+    int X2 = Integer.parseInt(X002);
+    Scanner Y0 = new Scanner (System.in);
+    System.out.println ("y1: ");
+    String Y01 =Y0.nextLine();
+    int Y1 = Integer.parseInt(Y01);
+    Scanner Y02 = new Scanner (System.in);
+    System.out.println ("y2: ");
+    String Y002 = Y02.nextLine();
+    int Y2 = Integer.parseInt(Y002);
+    //end of getting variables
+    //do (x2-x1) and (y2+y1)
+    int X = (X2-X1);
+    int Y = (Y2+Y1);
+    //do X^2 and Y^2
+    double Xsqr = Math.pow(X,2);
+    double Ysqr = Math.pow(Y,2);
+    //subtract them
+    double tot = (Xsqr-Ysqr);
+    //square root
+    double total = Math.sqrt(tot);
+    System.out.println("Distance between (x1,y1) and (x2,y2): "+total);
+  }
+}
